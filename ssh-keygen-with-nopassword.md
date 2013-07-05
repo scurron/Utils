@@ -1,2 +1,4 @@
-ssh-keygen -t rsa
-Type "Enter" when the terminal ask for "Entering your passphrase".
+Use command
+`ssh-keygen -t rsa`
+
+Then type "Enter" when the terminal ask for "Entering your passphrase".
