@@ -1,4 +1,4 @@
-* Use command
+Use command
 
 > `ssh-keygen -t rsa`
 
