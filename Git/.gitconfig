@@ -1,0 +1,68 @@
+[user]
+    name = scurron
+    email = scurron@lafourchette.com
+
+[format]
+    # Add the patch number and the total number of patches in the series to
+    # the subject of the patch email if more than one patch is being produced.
+    numbered = auto
+
+[gc]
+    # Do not remove references under .git/refs/heads and .git/refs/tags when
+    # git gc is run. The default behavior of git-gc is to pack the references
+    # and store the packed references in .git/packed-refs. I personally find
+    # the references kept in files under .git/refs very useful, they make the
+    # retrieval of branch or tag info very easy from a shell script so I do
+    # not want to have them packed when I run git-gc.
+    packrefs = 0
+
+[sendemail]
+    # Do not add the e-mail address from Signed-off-by and CC headers to the
+    # list of recipients. The default setting would send me a copy of every
+    # patch I sign off--which I do not want.
+    suppressfrom = true
+
+    # Set the envelope sender address explicitly. I configured my local
+    # postfix server to select the outbound SMTP server based on the sender
+    # address in the envelope so it is important that we have a correct email
+    # address there.
+    envelopesender = scurron@lafourchette.com
+
+[alias]
+   co = checkout
+   ci = commit
+   r = remote
+   f = fetch
+   s = status
+   st = status
+   b = branch
+   d = diff
+   a = add
+   lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+   l = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+   unstage = reset HEAD --
+   last = log -1
+   visual = !gitk
+   fp = format-patch
+   oups = commit --amend -C HEAD
+   
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    interactive=auto
+    iu = true
+
+[merge]
+    # Include the summary of merged commits into all newly created merge
+    # commits. The newly created merge commit will contain a one-line summary
+    # of every (well, most) merged commits.
+    log = true
+
+    # Show merge statistics after merge.
+    stat = true
+
+[branch]
+    # When creating a new branch off a remote branch, always set it up to
+    # track the remote branch so that we can pull from there.
+    autoseupmerge = always
