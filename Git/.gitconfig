@@ -40,12 +40,14 @@
    a = add
    lg = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
    l = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative
+   lgs = = log --graph --pretty=tformat:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%an %cr)%Creset' --abbrev-commit --date=relative --stat
    unstage = reset HEAD --
    last = log -1
    visual = !gitk
    fp = format-patch
    oups = commit --amend -C HEAD
-   
+   ap = add -p
+
 [color]
     branch = auto
     diff = auto
