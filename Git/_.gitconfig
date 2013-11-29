@@ -74,7 +74,7 @@
     whitespace = fix, -indent-with-non-tab, traling-space
 
 [include]
-    path = .git_aliases
+    path = ~/.git_aliases
 
 [commit]
-    template = .git-commit-template.txt
+    template = ~/.git-commit-template.txt
