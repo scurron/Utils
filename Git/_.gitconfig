@@ -68,3 +68,13 @@
     # When creating a new branch off a remote branch, always set it up to
     # track the remote branch so that we can pull from there.
     autoseupmerge = always
+
+[core]
+    editor = vim
+    whitespace = fix, -indent-with-non-tab, traling-space
+
+[include]
+    path = .git_aliases
+
+[commit]
+    template = .git-commit-template.txt
